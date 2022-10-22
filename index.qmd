@@ -1,0 +1,86 @@
+---
+title: "Running code while we're sleeping"
+subtitle: "Introduction to GitHub Actions for R users <br> [R-Ladies Abuja, Nigeria](https://twitter.com/RLadiesAbuja)"
+author: "[Beatriz Milz](https://twitter.com/BeaMilz)"
+format: 
+  rladies-revealjs:
+    footer: "Slides by [Beatriz Milz](https://beamilz.com) (@BeaMilz), made with [Quarto](https://quarto.org/docs/presentations/revealjs/index.html) and [Quarto R-Ladies Theme](https://github.com/beatrizmilz/quarto-rladies-theme#quarto-r-ladies-theme). Code available on [GitHub](https://github.com/beatrizmilz/2022-gha-r-ladies-abuja)."
+incremental: false
+embed-resources: true
+# 40 to 60 minutes
+---
+
+
+## Beatriz Milz 🇧🇷 {.center .aboutmeslide}
+
+-   Contact
+
+    -   Twitter: [\@BeaMilz](https://twitter.com/BeaMilz)
+
+    -   Blog: [beamilz.com](https://beamilz.com)
+
+-   About Bea
+
+    -   R-Ladies São Paulo Co-organizer
+
+    -   Teacher at [Curso-R](https://curso-r.com/)
+
+    -   Tidyverse instructor certified by RStudio
+
+<img src="img/octocat-1656339210373.png" style="right: -10px;height: 80%;top: -10px;position: absolute;"/>
+
+
+# What powers GitHub Actions give us?
+
+TODO!
+
+
+# Git and GitHub
+
+TODO!
+
+https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/
+
+# GitHub Actions
+
+TODO! Adapt examples from:
+
+https://curso-r.github.io/main-pacotes/slides/#87
+
+# Let's practice it!
+
+TODO! Adapt examples from:
+
+https://github.com/curso-r/202203-oficina-dsp/tree/main/oficinas/29-06-2022-automatizacao
+
+- Quando começar a escrever códigos em R, fazer no RStudio.
+
+
+
+## Presentation at `rstudio::conf(2022)` :
+
+[![](https://beamilz.com/talks/en/2022-rstudio-conf/featured.png){fig-align="center" width="80%"}](https://beamilz.com/talks/en/2022-rstudio-conf/)
+
+<center>
+<https://beamilz.com/talks/en/2022-rstudio-conf/>
+</center>
+
+##  More examples...
+
+[![](img/blog.png){fig-align="center" width="60%"}](https://beamilz.com/series-gha.html)
+
+<center>
+<https://beamilz.com/series-gha.html>
+</center>
+
+## Thanks!
+
+- Everyone who is here today! :D
+
+- [R-Ladies Abuja](https://twitter.com/RLadiesAbuja) and [Bilikisu W. Olatunji](https://twitter.com/qbwoa)
+
+- [R-Ladies São Paulo](https://www.meetup.com/pt-BR/rladies-sao-paulo/) and [R-Ladies Global](http://r-ladies.org/)
+
+-   [Curso-R](https://curso-r.com/) and [Julio Trecenti](https://github.com/jtrecenti), [Daniel Falbel](https://github.com/dfalbel), [Athos Damiani](https://github.com/Athospd)
+
+-   Creators and contributors of [r-lib/actions](https://github.com/r-lib/actions)
