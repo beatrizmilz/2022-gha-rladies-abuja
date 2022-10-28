@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+
+name: 02-hello-r-world
+
+jobs:
+  write-message:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: r-lib/actions/setup-r@v2
+      - name: print-message
+        run: Rscript -e 'print("Hello R World!")'
+  
+    
