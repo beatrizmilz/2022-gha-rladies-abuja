@@ -92,19 +92,67 @@ embed-resources: true
 
 ![](img/github.png){fig-align="center"}
 
+## Using Git and GitHub in RStudio
+
+- You can read in the [Prerequisites](prerequisites.html)!
+
 # GitHub Actions
 
-TODO! Adapt examples from:
+## What is GitHub Actions?
 
-https://curso-r.github.io/main-pacotes/slides/#87 https://beamilz.com/talks/pt/2021-github-actions-gyn/
+- It is a service from GitHub 
+
+- Allows us to automate code executions in the cloud.
+
+
+![](img/githubactions.jpg){fig-align="center"}
+
+## Concepts
+
+::: incremental
+
+
+- GitHub Actions allows us to create **workflows**.
+
+- GH workflows are linked to repositories.
+
+- A **workflow** needs a description of **Events** and **Jobs**.
+
+- **Events**: describes what triggers the workflow:  in what conditions should the workflow run? 
+
+- **Jobs**:  what the workflow should do? Imagine that its a brand new computer with no R installed, and we have to do all the setup in this step! 
+
+- Documentation: <https://docs.github.com/en/actions>
+
+:::
+
+
+## Important!
+
+- Workflows are stored in `.yaml` files.
+
+- The `.yaml` files must be in a specific directory: `.github/workflows/workflow-name.yaml`
+
+## Tips
+
+- In the repository [r-lib/actions](https://github.com/r-lib/actions/tree/old/examples#readme) there are some examples of GitHub Actions workflows that we can use  and adapt.
+
+
+- Package `{usethis}` is helpful to use some GHA workflows available in [r-lib/actions](https://github.com/r-lib/actions/tree/old/examples#readme): `usethis::use_github_action()` function.
+
+
+- Start from an existing workflow file, and change what is necessary.
+
 
 # Let's practice it!
 
-TODO! Adapt examples from:
+<!-- TODO! Adapt examples from: -->
 
-https://github.com/curso-r/202203-oficina-dsp/tree/main/oficinas/29-06-2022-automatizacao
+<!-- https://github.com/curso-r/202203-oficina-dsp/tree/main/oficinas/29-06-2022-automatizacao -->
 
--   Quando começar a escrever códigos em R, fazer no RStudio.
+<!-- -   Quando começar a escrever códigos em R, fazer no RStudio. -->
+
+# More content..
 
 ## Presentation at `rstudio::conf(2022)` :
 
@@ -118,6 +166,22 @@ https://github.com/curso-r/202203-oficina-dsp/tree/main/oficinas/29-06-2022-auto
 
 <center><https://beamilz.com/series-gha.html></center>
 
+## References
+
+
+### English
+
+
+- Documentation: <https://docs.github.com/en/actions>
+
+- [r-lib/actions](https://github.com/r-lib/actions)
+
+### In Portuguese
+
+- <https://curso-r.github.io/main-pacotes/slides/#87>
+
+- <https://beamilz.com/talks/pt/2021-github-actions-gyn/>
+
 ## Thanks!
 
 -   Everyone who is here today! :D
@@ -129,3 +193,8 @@ https://github.com/curso-r/202203-oficina-dsp/tree/main/oficinas/29-06-2022-auto
 -   [Curso-R](https://curso-r.com/) and [Julio Trecenti](https://github.com/jtrecenti), [Daniel Falbel](https://github.com/dfalbel), [Athos Damiani](https://github.com/Athospd)
 
 -   Creators and contributors of [r-lib/actions](https://github.com/r-lib/actions)
+
+
+<!-- TODO! Adapt examples from: -->
+
+<!-- https://curso-r.github.io/main-pacotes/slides/#87 https://beamilz.com/talks/pt/2021-github-actions-gyn/ -->

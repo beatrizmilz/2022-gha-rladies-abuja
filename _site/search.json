@@ -39,7 +39,7 @@
     "href": "slides.html#thanks",
     "title": "Running code while we’re sleeping",
     "section": "Thanks!",
-    "text": "Thanks!\n\nEveryone who is here today! :D\nR-Ladies Abuja and Bilikisu W. Olatunji\nR-Ladies São Paulo and R-Ladies Global\nCurso-R and Julio Trecenti, Daniel Falbel, Athos Damiani\nCreators and contributors of r-lib/actions\n\n\n\n\nSlides by Beatriz Milz (@BeaMilz), made with Quarto and Quarto R-Ladies Theme. Code available on GitHub."
+    "text": "Thanks!\n\nEveryone who is here today! :D\nR-Ladies Abuja and Bilikisu W. Olatunji\nR-Ladies São Paulo and R-Ladies Global\nCurso-R and Julio Trecenti, Daniel Falbel, Athos Damiani\nCreators and contributors of r-lib/actions\n\n\n\n\n\n\nSlides by Beatriz Milz (@BeaMilz), made with Quarto and Quarto R-Ladies Theme. Code available on GitHub."
   },
   {
     "objectID": "slides.html#beatriz-milz",
@@ -131,5 +131,47 @@
     "title": "Running code while we’re sleeping",
     "section": "GitHub",
     "text": "GitHub\n\n\nGitHub is a service where you store and share Git repositories.\nUsed by millions of people in open or closed source projects.\nUseful for collaborating with other programmers on data science projects.\nThere are alternatives such as GitLab and BitBucket.\nGitHub is a website that you can access on the internet."
+  },
+  {
+    "objectID": "slides.html#what-is-github-actions",
+    "href": "slides.html#what-is-github-actions",
+    "title": "Running code while we’re sleeping",
+    "section": "What is GitHub Actions?",
+    "text": "What is GitHub Actions?\n\nIt is a service from GitHub\nAllows us to automate code executions in the cloud."
+  },
+  {
+    "objectID": "slides.html#references",
+    "href": "slides.html#references",
+    "title": "Running code while we’re sleeping",
+    "section": "References",
+    "text": "References\nEnglish\n\nDocumentation: https://docs.github.com/en/actions\nr-lib/actions\n\nIn Portuguese\n\nhttps://curso-r.github.io/main-pacotes/slides/#87\nhttps://beamilz.com/talks/pt/2021-github-actions-gyn/"
+  },
+  {
+    "objectID": "slides.html#using-git-and-github-in-rstudio",
+    "href": "slides.html#using-git-and-github-in-rstudio",
+    "title": "Running code while we’re sleeping",
+    "section": "Using Git and GitHub in RStudio",
+    "text": "Using Git and GitHub in RStudio\n\nYou can read in the Prerequisites!"
+  },
+  {
+    "objectID": "slides.html#concepts",
+    "href": "slides.html#concepts",
+    "title": "Running code while we’re sleeping",
+    "section": "Concepts",
+    "text": "Concepts\n\n\nGitHub Actions allows us to create workflows.\nGH workflows are linked to repositories.\nA workflow needs a description of Events and Jobs.\nEvents: describes what triggers the workflow: in what conditions should the workflow run?\nJobs: what the workflow should do? Imagine that its a brand new computer with no R installed, and we have to do all the setup in this step!\nDocumentation: https://docs.github.com/en/actions"
+  },
+  {
+    "objectID": "slides.html#important",
+    "href": "slides.html#important",
+    "title": "Running code while we’re sleeping",
+    "section": "Important!",
+    "text": "Important!\n\nWorkflows are stored in .yaml files.\nThe .yaml files must be in a specific directory: .github/workflows/workflow-name.yaml"
+  },
+  {
+    "objectID": "slides.html#tips",
+    "href": "slides.html#tips",
+    "title": "Running code while we’re sleeping",
+    "section": "Tips",
+    "text": "Tips\n\nIn the repository r-lib/actions there are some examples of GitHub Actions workflows that we can use and adapt.\nPackage {usethis} is helpful to use some GHA workflows available in r-lib/actions: usethis::use_github_action() function.\nStart from an existing workflow file, and change what is necessary."
   }
 ]
