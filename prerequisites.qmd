@@ -1,0 +1,55 @@
+---
+title: "Prerequisites"
+author: "Beatriz Milz"
+---
+
+## TL;DR
+
+In this meetup we will talk about GitHub Actions, and I will be presenting some practial examples. If anyone is interested in following along, is important to:
+
+- Have a GitHub account: <https://github.com/>  - it's free.
+
+- It would be nice to already know how to use Git and GitHub in RStudio.\
+
+
+## Configuring Git and GitHub in RStudio
+
+ If you have not used Git and GitHub with RStudio IDE before, I recommend you take some time to prepare your environment!
+
+Here is a check-list you can use:
+
+-   [Install Git on your computer](https://git-scm.com/downloads)
+
+-   [Create a free account on GitHub](https://github.com/)
+
+-   Install package [usethis](https://usethis.r-lib.org/): `install.packages("usethis")`
+
+-   Introduce yourself to Git:
+```r
+usethis::use_git_config(
+  # your name
+  user.name = "Captain Marvel",
+  # your email used in your GitHub account
+  user.email = "awesomecaptain@gmail.com"
+)
+```    
+
+-   Create a GitHub PAT Token with `usethis::create_github_token()` (is like a password)
+
+-   Store your token with `gitcreds::gitcreds_set()`
+
+-   Restart your R Session (usually `CTRL + SHIFT + F10` will do the work)
+
+-   Use `usethis::git_sitrep()` to check if your name, email and PAT are configured. The most important thing to look for is: `Personal access token for 'https://github.com': '<discovered>'`.
+
+> From: <https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/#create-a-github-repository> 
+
+## Read more
+
+Suggestions of supplemental material about using Git and GitHub in RStudio:
+
+- First Steps in Learning the Use of Git & GitHub in RStudio - <https://www.youtube.com/watch?v=jN6tvgt3GK8>
+
+- You can read detailed information about how to do this in the book [Happy Git with R](https://happygitwithr.com/).
+
+

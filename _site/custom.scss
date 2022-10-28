@@ -1,0 +1,24 @@
+/*-- scss:defaults --*/
+// importing fonts
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=Yanone+Kaffeesatz&display=swap');
+
+
+
+/*-- scss:rules --*/
+div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link, div.sidebar-item-container .sidebar-link > code {
+  color: #86368a;
+}
+
+a {
+  color: #853886;
+  text-decoration-style: dashed;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  border-left: 1px solid #873582;
+  color: #853886 !important;
+}
+
+div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link, div.sidebar-item-container .sidebar-link > code {
+  color: #88338b;
+}

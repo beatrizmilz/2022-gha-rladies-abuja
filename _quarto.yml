@@ -1,0 +1,51 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "Introduction to GitHub Actions for R users"
+    
+  sidebar:
+    title: "Introduction to GitHub Actions for R users <br>"
+    background: "#FFFFFF"  
+    logo: https://pbs.twimg.com/profile_images/1334451715882487810/bFQd_kex_400x400.jpg
+    pinned: true
+    align: center
+    style: "docked"
+    search: true
+    collapse-level: 1    
+    tools:
+      - icon: github
+        href: https://github.com/beatrizmilz/2022-gha-rladies-abuja   
+        text: "GitHub Repository"
+    
+    contents:
+      - href: /
+        text: "Home" 
+      - prerequisites.qmd  
+      - slide.qmd
+
+  
+
+        
+        
+  page-footer: 
+    right: "Website created with [Quarto](https://quarto.org/). License: [Creative Commons Attribution-ShareAlike (CC BY-SA)](https://creativecommons.org/licenses/by-sa/2.0/)."
+    left: "&copy; Copyright 2022, [Beatriz Milz](https://beamilz.com)"
+    background: "#562457"
+            
+
+  
+
+
+format:
+  html:
+    theme: cosmo
+    mainfont: "Montserrat"
+    css: custom.scss
+    toc: true
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+
+editor: visual

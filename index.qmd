@@ -1,0 +1,9 @@
+---
+title: "Running code while we’re sleeping"
+subtitle: "Introduction to GitHub Actions for R users"
+author: "Beatriz Milz and R-Ladies Abuja, Nigeria"
+format: html
+editor: visual
+---
+
+## Welcome!
