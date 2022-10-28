@@ -1,0 +1,12 @@
+name: 01-hello-gha
+
+on:
+  workflow_dispatch:
+
+jobs:
+  write-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print-message
+        run: echo "Hello GitHub Actions! 🎉"
+  
