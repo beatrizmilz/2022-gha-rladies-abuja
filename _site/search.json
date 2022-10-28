@@ -96,5 +96,40 @@
     "title": "Prerequisites",
     "section": "Read more",
     "text": "Read more\nSuggestions of supplemental material about using Git and GitHub in RStudio:\n\nFirst Steps in Learning the Use of Git & GitHub in RStudio - https://www.youtube.com/watch?v=jN6tvgt3GK8\nYou can read detailed information about how to do this in the book Happy Git with R."
+  },
+  {
+    "objectID": "slides.html#run-arbitrary-r-scripts",
+    "href": "slides.html#run-arbitrary-r-scripts",
+    "title": "Running code while we’re sleeping",
+    "section": "Run arbitrary R scripts",
+    "text": "Run arbitrary R scripts\n\n\nScrape data from the internet\nRun reports with RMarkdown or Quarto\nSend emails\nSave results\nDeploy Shiny Apps.\n.. And so on! Depends on what are your skills in R."
+  },
+  {
+    "objectID": "slides.html#package-development",
+    "href": "slides.html#package-development",
+    "title": "Running code while we’re sleeping",
+    "section": "Package development",
+    "text": "Package development\n\n\nRun devtools::check()\nRun tests\nBuild and update documentation and website"
+  },
+  {
+    "objectID": "slides.html#git-and-github-1",
+    "href": "slides.html#git-and-github-1",
+    "title": "Running code while we’re sleeping",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\nGit is a Version Control System (VCS).\nIt is able to store the change history of all files inside a folder, which we call a repository.\nIt becomes important as your work is collaborative.\nGit is software that you can install on your computer."
+  },
+  {
+    "objectID": "slides.html#git",
+    "href": "slides.html#git",
+    "title": "Running code while we’re sleeping",
+    "section": "Git",
+    "text": "Git\n\n\nGit is a Version Control System (VCS).\nIt is able to store the change history of all files inside a folder, which we call a repository.\nIt becomes important as your work is collaborative.\nGit is software that you can install on your computer."
+  },
+  {
+    "objectID": "slides.html#github",
+    "href": "slides.html#github",
+    "title": "Running code while we’re sleeping",
+    "section": "GitHub",
+    "text": "GitHub\n\n\nGitHub is a service where you store and share Git repositories.\nUsed by millions of people in open or closed source projects.\nUseful for collaborating with other programmers on data science projects.\nThere are alternatives such as GitLab and BitBucket.\nGitHub is a website that you can access on the internet."
   }
 ]
