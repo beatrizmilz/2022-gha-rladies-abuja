@@ -3,9 +3,6 @@ title: "Slides"
 author: "Beatriz Milz"
 ---
 
-
-
-<a href="/slides.html" target="_blank">
-![](img/slide.png){fig-align="center"}
+<a href="/slides.html" target="_blank"> ![](img/slide.png){fig-align="center"}
 
 </a>
