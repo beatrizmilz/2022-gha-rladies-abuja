@@ -1,6 +1,6 @@
 on:
   workflow_dispatch:
-  on: push
+  on: [push]
 
 name: 07-saving-results
 

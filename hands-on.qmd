@@ -38,9 +38,7 @@ paste0(
 
 ### 1 - Writing a simple workflow
 
-
 #### `01-hello-gha.yml`
-
 
 ```{r}
 #| results: asis
@@ -62,7 +60,6 @@ yaml_file_as_code(".github/workflows/02-hello-r-world.yml")
 
 ### 3 - Run code from R script (only base packages)
 
-
 #### `03-run-r-script.yml`
 
 ```{r}
@@ -71,7 +68,6 @@ yaml_file_as_code(".github/workflows/02-hello-r-world.yml")
 #| warning: false
 yaml_file_as_code(".github/workflows/03-run-r-script.yml")
 ```
-
 
 #### `scripts/03-r-script.R`
 
@@ -82,9 +78,7 @@ yaml_file_as_code(".github/workflows/03-run-r-script.yml")
 r_file_as_code("scripts/03-r-script.R")
 ```
 
-
 ### 4 - Run code using other packages
-
 
 #### `04-run-r-script-with-pkgs.yml`
 
@@ -95,7 +89,6 @@ r_file_as_code("scripts/03-r-script.R")
 yaml_file_as_code(".github/workflows/04-run-r-script-with-pkgs.yml")
 ```
 
-
 #### `scripts/04-r-script.R`
 
 ```{r}
@@ -105,9 +98,7 @@ yaml_file_as_code(".github/workflows/04-run-r-script-with-pkgs.yml")
 r_file_as_code("scripts/04-r-script.R")
 ```
 
-
 ### 5 - Save results from code in the repository
-
 
 #### `05-saving-results.yml`
 
@@ -133,10 +124,9 @@ Tip: [CronTab Guru](https://crontab.guru/).
 yaml_file_as_code(".github/workflows/06-schedule.yml")
 ```
 
-
 ### 7 - Changes on the code
 
-The workflow run is triggered every time someone pushes a change to the repository or merges a pull request. 
+The workflow run is triggered every time someone pushes a change to the repository or merges a pull request.
 
 #### `07-on-push.yml`
 
