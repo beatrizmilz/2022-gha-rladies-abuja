@@ -1,6 +1,9 @@
 on:
   workflow_dispatch:
-  on: [push]
+  push:
+    branches:
+      - main
+      - master
 
 name: 07-saving-results
 

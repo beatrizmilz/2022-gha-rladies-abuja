@@ -21,7 +21,7 @@ website:
         text: "GitHub Repository"
     
     contents:
-      - href: /index.qmd
+      - href: index.qmd
         text: "Home" 
       - prerequisites.qmd  
       - slide.qmd

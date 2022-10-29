@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="//index.html" class="sidebar-item-text sidebar-link">Home</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Home</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -344,7 +344,10 @@ jobs:
 <div class="sourceCode">
 <pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
   workflow_dispatch:
-  on: [push]
+  push:
+    branches:
+      - main
+      - master
 
 name: 07-saving-results
 
