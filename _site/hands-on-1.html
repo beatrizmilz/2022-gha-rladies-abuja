@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Beatriz Milz and R-Ladies Abuja, Nigeria">
+<meta name="author" content="Beatriz Milz">
 
-<title>Introduction to GitHub Actions for R users - Running code while we’re sleeping</title>
+<title>Introduction to GitHub Actions for R users - Hands on!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Running code while we’re sleeping</h1>
+      <h1 class="quarto-secondary-nav-title">Hands on!</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -113,11 +113,6 @@ ul.task-list li input[type="checkbox"] {
   <a href="./slide.html" class="sidebar-item-text sidebar-link">Slides</a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./hands-on.html" class="sidebar-item-text sidebar-link">Hands on!</a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -127,7 +122,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#writing-a-simple-workflow" id="toc-writing-a-simple-workflow" class="nav-link active" data-scroll-target="#writing-a-simple-workflow">1 - Writing a simple workflow</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2 -</a></li>
   </ul>
 </nav>
     </div>
@@ -136,8 +132,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Running code while we’re sleeping</h1>
-<p class="subtitle lead">Introduction to GitHub Actions for R users</p>
+<h1 class="title d-none d-lg-block">Hands on!</h1>
 </div>
 
 
@@ -147,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Beatriz Milz and R-Ladies Abuja, Nigeria </p>
+             <p>Beatriz Milz </p>
           </div>
   </div>
     
@@ -157,8 +152,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
+<section id="writing-a-simple-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="writing-a-simple-workflow">1 - Writing a simple workflow</h2>
+<p>name: 01-hello-gha</p>
+<p>on: workflow_dispatch:</p>
+<p>jobs: write-message: runs-on: ubuntu-latest steps: - name: print-message run: echo “Hello GitHub Actions! 🎉”</p>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">2 -</h2>
 
 
 </section>

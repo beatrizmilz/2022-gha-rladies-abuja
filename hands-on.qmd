@@ -1,0 +1,92 @@
+---
+title: "Hands on!"
+author: "Beatriz Milz"
+---
+
+
+```{r}
+#| echo: false
+file_as_code <- function(file){
+  code <- readLines(file) |> 
+  paste0(collapse = "\n")
+
+paste0(
+  '<div class="sourceCode">
+  <pre class="downlit sourceCode r code-with-copy">
+  <code class="sourceCode R">',
+  code,
+  '</code></pre></div>'
+) |> cat()
+}
+```
+
+
+## Exploring jobs! 
+
+### 1 - Writing a simple workflow
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+file_as_code(".github/workflows/01-hello-gha.yml")
+```
+
+
+
+### 2 - Print message using R!
+
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+file_as_code(".github/workflows/02-hello-r-world.yml")
+```
+
+
+### 3 - Run code from R script (only base packages)
+
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+file_as_code(".github/workflows/03-run-r-script.yml")
+```
+
+
+
+- Also, let's create a simple script and save it on `"scripts/03-r-script.R"`:
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+file_as_code("scripts/03-r-script.R")
+```
+
+
+### 4 - Run code using other packages
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+file_as_code(".github/workflows/04-run-r-script-with-pkgs.yml")
+```
+
+
+
+### 5 - Save results from code in the repository
+
+TODO!
+
+
+## Exploring events!
+
+### CRON
+
+### Changes on code
+
+

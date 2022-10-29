@@ -173,5 +173,61 @@
     "title": "Running code while we’re sleeping",
     "section": "Tips",
     "text": "Tips\n\nIn the repository r-lib/actions there are some examples of GitHub Actions workflows that we can use and adapt.\nPackage {usethis} is helpful to use some GHA workflows available in r-lib/actions: usethis::use_github_action() function.\nStart from an existing workflow file, and change what is necessary."
+  },
+  {
+    "objectID": "hands-on-1.html",
+    "href": "hands-on-1.html",
+    "title": "Hands on!",
+    "section": "",
+    "text": "name: 01-hello-gha\non: workflow_dispatch:\njobs: write-message: runs-on: ubuntu-latest steps: - name: print-message run: echo “Hello GitHub Actions! 🎉”"
+  },
+  {
+    "objectID": "hands-on-1.html#section",
+    "href": "hands-on-1.html#section",
+    "title": "Hands on!",
+    "section": "2 -",
+    "text": "2 -"
+  },
+  {
+    "objectID": "hands-on.html",
+    "href": "hands-on.html",
+    "title": "Hands on!",
+    "section": "",
+    "text": "file_as_code <- function(file){\n  code <- readLines(file) |> \n  paste0(collapse = \"\\n\")\n\npaste0(\n  '<div class=\"sourceCode\">\n  <pre class=\"downlit sourceCode r code-with-copy\">\n  <code class=\"sourceCode R\">',\n  code,\n  '</code></pre></div>'\n) |> cat()\n}"
+  },
+  {
+    "objectID": "hands-on.html#section",
+    "href": "hands-on.html#section",
+    "title": "Hands on!",
+    "section": "2 -",
+    "text": "2 -"
+  },
+  {
+    "objectID": "hands-on.html#writing-a-simple-workflow",
+    "href": "hands-on.html#writing-a-simple-workflow",
+    "title": "Hands on!",
+    "section": "1 - Writing a simple workflow",
+    "text": "1 - Writing a simple workflow\n\n  name: 01-hello-gha\n\non:\n  workflow_dispatch:\n\njobs:\n  write-message:\n    runs-on: ubuntu-latest\n    steps:\n      - name: print-message\n        run: echo \"Hello GitHub Actions! 🎉\""
+  },
+  {
+    "objectID": "hands-on.html#exploring-events",
+    "href": "hands-on.html#exploring-events",
+    "title": "Hands on!",
+    "section": "Exploring events!",
+    "text": "Exploring events!\nCRON\nChanges on code"
+  },
+  {
+    "objectID": "hands-on.html#exploring-jobs",
+    "href": "hands-on.html#exploring-jobs",
+    "title": "Hands on!",
+    "section": "Exploring jobs!",
+    "text": "Exploring jobs!\n1 - Writing a simple workflow\n\n  on:\n  workflow_dispatch:\n\nname: 01-hello-gha\n\njobs:\n  write-message:\n    runs-on: ubuntu-latest\n    steps:\n      - name: print-message\n        run: echo \"Hello GitHub Actions! 🎉\"\n\n2 - Print message using R!\n\n  on:\n  workflow_dispatch:\n\nname: 02-hello-r-world\n\njobs:\n  write-message:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: r-lib/actions/setup-r@v2\n      - name: print-message\n        run: Rscript -e 'print(\"Hello R World!\")'\n        \n\n3 - Run code from R script (only base packages)\n\n  on:\n  workflow_dispatch:\n\nname: 03-run-r-script\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n      - name: run-script\n        run: Rscript scripts/03-r-script.R\n        \n\n\nAlso, let’s create a simple script and save it on \"scripts/03-r-script.R\":\n\n\n\n  sample(1:100, 10)\nSys.Date()\n\n4 - Run code using other packages\n\n  on:\n  workflow_dispatch:\n\nname: 04-run-r-script-with-pkgs\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          extra-packages: |\n            any::httr          \n\n      - name: run-script\n        run: Rscript scripts/04-r-script-parte2.R        \n\n5 - Save results from code in the repository\nTODO!"
+  },
+  {
+    "objectID": "hands-on.html#save-results-from-code-in-the-repository",
+    "href": "hands-on.html#save-results-from-code-in-the-repository",
+    "title": "Hands on!",
+    "section": "5 - Save results from code in the repository",
+    "text": "5 - Save results from code in the repository\nTODO!"
   }
 ]

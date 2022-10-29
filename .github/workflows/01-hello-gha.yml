@@ -1,7 +1,7 @@
-name: 01-hello-gha
-
 on:
   workflow_dispatch:
+
+name: 01-hello-gha
 
 jobs:
   write-message:
@@ -9,4 +9,3 @@ jobs:
     steps:
       - name: print-message
         run: echo "Hello GitHub Actions! 🎉"
-  
