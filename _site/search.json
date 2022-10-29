@@ -1,101 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Untitled",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
-  },
-  {
-    "objectID": "index.html#running-code",
-    "href": "index.html#running-code",
-    "title": "Untitled",
-    "section": "Running Code",
-    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
-  },
-  {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Running code while we’re sleeping",
-    "section": "",
-    "text": "Contact\n\nTwitter: @BeaMilz\nBlog: beamilz.com\n\nAbout Bea\n\nR-Ladies São Paulo Co-organizer\nTeacher at Curso-R\nTidyverse instructor certified by RStudio"
-  },
-  {
-    "objectID": "slides.html#presentation-at-rstudioconf2022",
-    "href": "slides.html#presentation-at-rstudioconf2022",
-    "title": "Running code while we’re sleeping",
-    "section": "Presentation at rstudio::conf(2022) :",
-    "text": "Presentation at rstudio::conf(2022) :\n\n\nhttps://beamilz.com/talks/en/2022-rstudio-conf/"
-  },
-  {
-    "objectID": "slides.html#more-examples",
-    "href": "slides.html#more-examples",
-    "title": "Running code while we’re sleeping",
-    "section": "More examples…",
-    "text": "More examples…\n\n\nhttps://beamilz.com/series-gha.html"
-  },
-  {
-    "objectID": "slides.html#thanks",
-    "href": "slides.html#thanks",
-    "title": "Running code while we’re sleeping",
-    "section": "Thanks!",
-    "text": "Thanks!\n\nEveryone who is here today! :D\nR-Ladies Abuja and Bilikisu W. Olatunji\nR-Ladies São Paulo and R-Ladies Global\nCurso-R and Julio Trecenti, Daniel Falbel, Athos Damiani\nCreators and contributors of r-lib/actions\n\n\n\n\n\n\nSlides by Beatriz Milz (@BeaMilz), made with Quarto and Quarto R-Ladies Theme. Code available on GitHub."
-  },
-  {
     "objectID": "slides.html#beatriz-milz",
     "href": "slides.html#beatriz-milz",
     "title": "Running code while we’re sleeping",
     "section": "Beatriz Milz 🇧🇷",
     "text": "Beatriz Milz 🇧🇷\n\nContact\n\nTwitter: @BeaMilz\nBlog: beamilz.com\n\nAbout Bea\n\nR-Ladies São Paulo Co-organizer\nTeacher at Curso-R\nTidyverse instructor certified by RStudio"
-  },
-  {
-    "objectID": "PRE.html",
-    "href": "PRE.html",
-    "title": "Prerequisites",
-    "section": "",
-    "text": "In this meetup we will talk about GitHub Actions, and I will be presenting some practial examples. If anyone is interested in following along, is important to:\n\nHave a GitHub account: https://github.com/  - it’s free.\nIt would be nice to already know how to use Git and GitHub in RStudio."
-  },
-  {
-    "objectID": "PRE.html#what-is-git-github",
-    "href": "PRE.html#what-is-git-github",
-    "title": "Prerequisites",
-    "section": "What is Git? GitHub?",
-    "text": "What is Git? GitHub?\n::: From: https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/#create-a-github-repository :::\nIf you have not used Git and GitHub with RStudio IDE before, I recommend you take some time to prepare your environment!\nHere is a check-list you can use:\n\nInstall Git on your computer\nCreate a free account on GitHub\nInstall package usethis: install.packages(\"usethis\")\nIntroduce yourself to Git:\n\nusethis::use_git_config(\n  # your name\n  user.name = \"Captain Marvel\",\n  # your email used in your GitHub account\n  user.email = \"awesomecaptain@gmail.com\"\n)\n\nCreate a GitHub PAT Token with usethis::create_github_token() (is like a password)\nStore your token with gitcreds::gitcreds_set()\nRestart your R Session (usually CTRL + SHIFT + F10 will do the work)\nUse usethis::git_sitrep() to check if your name, email and PAT are configured. The most important thing to look for is: Personal access token for 'https://github.com': '<discovered>'."
-  },
-  {
-    "objectID": "PRE.html#read-more",
-    "href": "PRE.html#read-more",
-    "title": "Prerequisites",
-    "section": "Read more",
-    "text": "Read more\nSuggestions of supplemental material about using Git and GitHub in RStudio:\n\nFirst Steps in Learning the Use of Git & GitHub in RStudio - https://www.youtube.com/watch?v=jN6tvgt3GK8\nYou can read detailed information about how to do this in the book Happy Git with R."
-  },
-  {
-    "objectID": "PRE.html#configuring-git-and-github-in-rstudio",
-    "href": "PRE.html#configuring-git-and-github-in-rstudio",
-    "title": "Prerequisites",
-    "section": "Configuring Git and GitHub in RStudio",
-    "text": "Configuring Git and GitHub in RStudio\n\nFrom: https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/#create-a-github-repository\n\nIf you have not used Git and GitHub with RStudio IDE before, I recommend you take some time to prepare your environment!\nHere is a check-list you can use:\n\nInstall Git on your computer\nCreate a free account on GitHub\nInstall package usethis: install.packages(\"usethis\")\nIntroduce yourself to Git:\n\nusethis::use_git_config(\n  # your name\n  user.name = \"Captain Marvel\",\n  # your email used in your GitHub account\n  user.email = \"awesomecaptain@gmail.com\"\n)\n\nCreate a GitHub PAT Token with usethis::create_github_token() (is like a password)\nStore your token with gitcreds::gitcreds_set()\nRestart your R Session (usually CTRL + SHIFT + F10 will do the work)\nUse usethis::git_sitrep() to check if your name, email and PAT are configured. The most important thing to look for is: Personal access token for 'https://github.com': '<discovered>'."
-  },
-  {
-    "objectID": "prerequisites.html",
-    "href": "prerequisites.html",
-    "title": "Prerequisites",
-    "section": "",
-    "text": "In this meetup we will talk about GitHub Actions, and I will be presenting some practial examples. If anyone is interested in following along, is important to:\n\nHave a GitHub account: https://github.com/  - it’s free.\nIt would be nice to already know how to use Git and GitHub in RStudio."
-  },
-  {
-    "objectID": "prerequisites.html#configuring-git-and-github-in-rstudio",
-    "href": "prerequisites.html#configuring-git-and-github-in-rstudio",
-    "title": "Prerequisites",
-    "section": "Configuring Git and GitHub in RStudio",
-    "text": "Configuring Git and GitHub in RStudio\nIf you have not used Git and GitHub with RStudio IDE before, I recommend you take some time to prepare your environment!\nHere is a check-list you can use:\n\nInstall Git on your computer\nCreate a free account on GitHub\nInstall package usethis: install.packages(\"usethis\")\nIntroduce yourself to Git:\n\nusethis::use_git_config(\n  # your name\n  user.name = \"Captain Marvel\",\n  # your email used in your GitHub account\n  user.email = \"awesomecaptain@gmail.com\"\n)\n\nCreate a GitHub PAT Token with usethis::create_github_token() (is like a password)\nStore your token with gitcreds::gitcreds_set()\nRestart your R Session (usually CTRL + SHIFT + F10 will do the work)\nUse usethis::git_sitrep() to check if your name, email and PAT are configured. The most important thing to look for is: Personal access token for 'https://github.com': '<discovered>'.\n\n\nFrom: https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/#create-a-github-repository"
-  },
-  {
-    "objectID": "prerequisites.html#read-more",
-    "href": "prerequisites.html#read-more",
-    "title": "Prerequisites",
-    "section": "Read more",
-    "text": "Read more\nSuggestions of supplemental material about using Git and GitHub in RStudio:\n\nFirst Steps in Learning the Use of Git & GitHub in RStudio - https://www.youtube.com/watch?v=jN6tvgt3GK8\nYou can read detailed information about how to do this in the book Happy Git with R."
   },
   {
     "objectID": "slides.html#run-arbitrary-r-scripts",
@@ -112,13 +21,6 @@
     "text": "Package development\n\n\nRun devtools::check()\nRun tests\nBuild and update documentation and website"
   },
   {
-    "objectID": "slides.html#git-and-github-1",
-    "href": "slides.html#git-and-github-1",
-    "title": "Running code while we’re sleeping",
-    "section": "Git and GitHub",
-    "text": "Git and GitHub\n\n\nGit is a Version Control System (VCS).\nIt is able to store the change history of all files inside a folder, which we call a repository.\nIt becomes important as your work is collaborative.\nGit is software that you can install on your computer."
-  },
-  {
     "objectID": "slides.html#git",
     "href": "slides.html#git",
     "title": "Running code while we’re sleeping",
@@ -133,25 +35,18 @@
     "text": "GitHub\n\n\nGitHub is a service where you store and share Git repositories.\nUsed by millions of people in open or closed source projects.\nUseful for collaborating with other programmers on data science projects.\nThere are alternatives such as GitLab and BitBucket.\nGitHub is a website that you can access on the internet."
   },
   {
-    "objectID": "slides.html#what-is-github-actions",
-    "href": "slides.html#what-is-github-actions",
-    "title": "Running code while we’re sleeping",
-    "section": "What is GitHub Actions?",
-    "text": "What is GitHub Actions?\n\nIt is a service from GitHub\nAllows us to automate code executions in the cloud."
-  },
-  {
-    "objectID": "slides.html#references",
-    "href": "slides.html#references",
-    "title": "Running code while we’re sleeping",
-    "section": "References",
-    "text": "References\nEnglish\n\nDocumentation: https://docs.github.com/en/actions\nr-lib/actions\n\nIn Portuguese\n\nhttps://curso-r.github.io/main-pacotes/slides/#87\nhttps://beamilz.com/talks/pt/2021-github-actions-gyn/"
-  },
-  {
     "objectID": "slides.html#using-git-and-github-in-rstudio",
     "href": "slides.html#using-git-and-github-in-rstudio",
     "title": "Running code while we’re sleeping",
     "section": "Using Git and GitHub in RStudio",
     "text": "Using Git and GitHub in RStudio\n\nYou can read in the Prerequisites!"
+  },
+  {
+    "objectID": "slides.html#what-is-github-actions",
+    "href": "slides.html#what-is-github-actions",
+    "title": "Running code while we’re sleeping",
+    "section": "What is GitHub Actions?",
+    "text": "What is GitHub Actions?\n\nIt is a service from GitHub\nAllows us to automate code executions in the cloud."
   },
   {
     "objectID": "slides.html#concepts",
@@ -175,59 +70,66 @@
     "text": "Tips\n\nIn the repository r-lib/actions there are some examples of GitHub Actions workflows that we can use and adapt.\nPackage {usethis} is helpful to use some GHA workflows available in r-lib/actions: usethis::use_github_action() function.\nStart from an existing workflow file, and change what is necessary."
   },
   {
-    "objectID": "hands-on-1.html",
-    "href": "hands-on-1.html",
-    "title": "Hands on!",
+    "objectID": "slides.html#presentation-at-rstudioconf2022",
+    "href": "slides.html#presentation-at-rstudioconf2022",
+    "title": "Running code while we’re sleeping",
+    "section": "Presentation at rstudio::conf(2022) :",
+    "text": "Presentation at rstudio::conf(2022) :\n\n\nhttps://beamilz.com/talks/en/2022-rstudio-conf/"
+  },
+  {
+    "objectID": "slides.html#more-examples",
+    "href": "slides.html#more-examples",
+    "title": "Running code while we’re sleeping",
+    "section": "More examples…",
+    "text": "More examples…\n\n\nhttps://beamilz.com/series-gha.html"
+  },
+  {
+    "objectID": "slides.html#references",
+    "href": "slides.html#references",
+    "title": "Running code while we’re sleeping",
+    "section": "References",
+    "text": "References\nEnglish\n\nDocumentation: https://docs.github.com/en/actions\nr-lib/actions\n\nIn Portuguese\n\nhttps://curso-r.github.io/main-pacotes/slides/#87\nhttps://beamilz.com/talks/pt/2021-github-actions-gyn/"
+  },
+  {
+    "objectID": "slides.html#thanks",
+    "href": "slides.html#thanks",
+    "title": "Running code while we’re sleeping",
+    "section": "Thanks!",
+    "text": "Thanks!\n\nEveryone who is here today! :D\nR-Ladies Abuja and Bilikisu W. Olatunji\nR-Ladies São Paulo and R-Ladies Global\nCurso-R and Julio Trecenti, Daniel Falbel, Athos Damiani\nCreators and contributors of r-lib/actions\n\n\n\n\n\n\nSlides by Beatriz Milz (@BeaMilz), made with Quarto and Quarto R-Ladies Theme. Code available on GitHub."
+  },
+  {
+    "objectID": "prerequisites.html",
+    "href": "prerequisites.html",
+    "title": "Prerequisites",
     "section": "",
-    "text": "name: 01-hello-gha\non: workflow_dispatch:\njobs: write-message: runs-on: ubuntu-latest steps: - name: print-message run: echo “Hello GitHub Actions! 🎉”"
+    "text": "In this meetup we will talk about GitHub Actions, and I will be presenting some practial examples. If anyone is interested in following along, is important to:\n\nHave a GitHub account: https://github.com/  - it’s free.\nIt would be nice to already know how to use Git and GitHub in RStudio."
   },
   {
-    "objectID": "hands-on-1.html#section",
-    "href": "hands-on-1.html#section",
-    "title": "Hands on!",
-    "section": "2 -",
-    "text": "2 -"
+    "objectID": "prerequisites.html#configuring-git-and-github-in-rstudio",
+    "href": "prerequisites.html#configuring-git-and-github-in-rstudio",
+    "title": "Prerequisites",
+    "section": "Configuring Git and GitHub in RStudio",
+    "text": "Configuring Git and GitHub in RStudio\nIf you have not used Git and GitHub with RStudio IDE before, I recommend you take some time to prepare your environment!\nHere is a check-list you can use:\n\nInstall Git on your computer\nCreate a free account on GitHub\nInstall package usethis: install.packages(\"usethis\")\nIntroduce yourself to Git:\n\nusethis::use_git_config(\n  # your name\n  user.name = \"Captain Marvel\",\n  # your email used in your GitHub account\n  user.email = \"awesomecaptain@gmail.com\"\n)\n\nCreate a GitHub PAT Token with usethis::create_github_token() (is like a password)\nStore your token with gitcreds::gitcreds_set()\nRestart your R Session (usually CTRL + SHIFT + F10 will do the work)\nUse usethis::git_sitrep() to check if your name, email and PAT are configured. The most important thing to look for is: Personal access token for 'https://github.com': '<discovered>'.\n\n\nFrom: https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/#create-a-github-repository"
   },
   {
-    "objectID": "hands-on.html",
-    "href": "hands-on.html",
-    "title": "Hands on!",
-    "section": "",
-    "text": "file_as_code <- function(file){\n  code <- readLines(file) |> \n  paste0(collapse = \"\\n\")\n\npaste0(\n  '<div class=\"sourceCode\">\n  <pre class=\"downlit sourceCode r code-with-copy\">\n  <code class=\"sourceCode R\">',\n  code,\n  '</code></pre></div>'\n) |> cat()\n}"
-  },
-  {
-    "objectID": "hands-on.html#section",
-    "href": "hands-on.html#section",
-    "title": "Hands on!",
-    "section": "2 -",
-    "text": "2 -"
-  },
-  {
-    "objectID": "hands-on.html#writing-a-simple-workflow",
-    "href": "hands-on.html#writing-a-simple-workflow",
-    "title": "Hands on!",
-    "section": "1 - Writing a simple workflow",
-    "text": "1 - Writing a simple workflow\n\n  name: 01-hello-gha\n\non:\n  workflow_dispatch:\n\njobs:\n  write-message:\n    runs-on: ubuntu-latest\n    steps:\n      - name: print-message\n        run: echo \"Hello GitHub Actions! 🎉\""
-  },
-  {
-    "objectID": "hands-on.html#exploring-events",
-    "href": "hands-on.html#exploring-events",
-    "title": "Hands on!",
-    "section": "Exploring events!",
-    "text": "Exploring events!\n6 - Schedule\nTip: CronTab Guru.\n\n  on:\n  workflow_dispatch:\n  schedule:\n  - cron: '*/5 * * * *'\n  \nname: 06-event-schedule\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\"\n\nChanges on code"
+    "objectID": "prerequisites.html#read-more",
+    "href": "prerequisites.html#read-more",
+    "title": "Prerequisites",
+    "section": "Read more",
+    "text": "Read more\nSuggestions of supplemental material about using Git and GitHub in RStudio:\n\nFirst Steps in Learning the Use of Git & GitHub in RStudio - https://www.youtube.com/watch?v=jN6tvgt3GK8\nYou can read detailed information about how to do this in the book Happy Git with R."
   },
   {
     "objectID": "hands-on.html#exploring-jobs",
     "href": "hands-on.html#exploring-jobs",
     "title": "Hands on!",
     "section": "Exploring jobs!",
-    "text": "Exploring jobs!\n1 - Writing a simple workflow\n01-hello-gha.yml\n\n  on:\n  workflow_dispatch:\n\nname: 01-hello-gha\n\njobs:\n  write-message:\n    runs-on: ubuntu-latest\n    steps:\n      - name: print-message\n        run: echo \"Hello GitHub Actions! 🎉\"\n\n2 - Print message using R!\n02-hello-r-world.yml\n\n  on:\n  workflow_dispatch:\n\nname: 02-hello-r-world\n\njobs:\n  write-message:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: r-lib/actions/setup-r@v2\n      - name: print-message\n        run: Rscript -e 'print(\"Hello R World!\")'\n        \n\n3 - Run code from R script (only base packages)\n03-run-r-script.yml\n\n  on:\n  workflow_dispatch:\n\nname: 03-run-r-script\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n      - name: run-script\n        run: Rscript scripts/03-r-script.R\n        \n\nscripts/03-r-script.R\n\n\n\nprint(\"Sampling 10 numbers between 1 and 100: \")\nsample(1:100, 10)\n\nprint(\"Print date: \")\nSys.Date()\n\n4 - Run code using other packages\n04-run-r-script-with-pkgs.yml\n\n  on:\n  workflow_dispatch:\n\nname: 04-run-r-script-with-pkgs\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n\nscripts/04-r-script.R\n\n\n\nlibrary(httr)\nlibrary(fs)\n\nprint(\"Checking which files we have:\")\ndir_ls()\n\n#  the URL \nurl_download = \"https://app.anm.gov.br/SIGBM/Publico/ClassificacaoNacionalDaBarragem/ExportarExcel\"\n\n# file name to save\nfile_name = paste0(\"sigbm_download_\", Sys.Date(), \".xlsx\")\n\n\nprint(\"Making a POST request and writing file on disk:\")\nPOST(url_download, write_disk(file_name))\n\n\nprint(\"Checking which files we have:\")\ndir_ls()\n\n5 - Save results from code in the repository\n\n  on:\n  workflow_dispatch:\n\nname: 05-saving-results\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\""
+    "text": "Exploring jobs!\n1 - Writing a simple workflow\n01-hello-gha.yml\n\n  on:\n  workflow_dispatch:\n\nname: 01-hello-gha\n\njobs:\n  write-message:\n    runs-on: ubuntu-latest\n    steps:\n      - name: print-message\n        run: echo \"Hello GitHub Actions! 🎉\"\n\n2 - Print message using R!\n02-hello-r-world.yml\n\n  on:\n  workflow_dispatch:\n\nname: 02-hello-r-world\n\njobs:\n  write-message:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: r-lib/actions/setup-r@v2\n      - name: print-message\n        run: Rscript -e 'print(\"Hello R World!\")'\n        \n\n3 - Run code from R script (only base packages)\n03-run-r-script.yml\n\n  on:\n  workflow_dispatch:\n\nname: 03-run-r-script\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n      - name: run-script\n        run: Rscript scripts/03-r-script.R\n        \n\nscripts/03-r-script.R\n\n\n\nprint(\"Sampling 10 numbers between 1 and 100: \")\nsample(1:100, 10)\n\nprint(\"Print date: \")\nSys.Date()\n\n4 - Run code using other packages\n04-run-r-script-with-pkgs.yml\n\n  on:\n  workflow_dispatch:\n\nname: 04-run-r-script-with-pkgs\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n\nscripts/04-r-script.R\n\n\n\nlibrary(httr)\nlibrary(fs)\n\nprint(\"Checking which files we have:\")\ndir_ls()\n\n#  the URL \nurl_download = \"https://app.anm.gov.br/SIGBM/Publico/ClassificacaoNacionalDaBarragem/ExportarExcel\"\n\n# file name to save\nfile_name = paste0(\"sigbm_download_\", Sys.Date(), \".xlsx\")\n\n\nprint(\"Making a POST request and writing file on disk:\")\nPOST(url_download, write_disk(file_name))\n\n\nprint(\"Checking which files we have:\")\ndir_ls()\n\n5 - Save results from code in the repository\n05-saving-results.yml\n\n  on:\n  workflow_dispatch:\n\nname: 05-saving-results\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\""
   },
   {
-    "objectID": "hands-on.html#save-results-from-code-in-the-repository",
-    "href": "hands-on.html#save-results-from-code-in-the-repository",
+    "objectID": "hands-on.html#exploring-events",
+    "href": "hands-on.html#exploring-events",
     "title": "Hands on!",
-    "section": "5 - Save results from code in the repository",
-    "text": "5 - Save results from code in the repository\nTODO!"
+    "section": "Exploring events!",
+    "text": "Exploring events!\n6 - Schedule\nTip: CronTab Guru.\n06-schedule.yml\n\n  on:\n  workflow_dispatch:\n  schedule:\n  - cron: '*/5 * * * *'\n  \nname: 06-event-schedule\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\"\n\n7 - Changes on the code\nThe workflow run is triggered every time someone pushes a change to the repository or merges a pull request.\n07-on-push.yml\n\n  on:\n  workflow_dispatch:\n  on: push\n\nname: 07-saving-results\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\""
   }
 ]

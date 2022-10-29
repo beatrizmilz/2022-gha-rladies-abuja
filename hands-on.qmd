@@ -108,6 +108,9 @@ r_file_as_code("scripts/04-r-script.R")
 
 ### 5 - Save results from code in the repository
 
+
+#### `05-saving-results.yml`
+
 ```{r}
 #| results: asis
 #| echo: false
@@ -121,6 +124,8 @@ yaml_file_as_code(".github/workflows/05-saving-results.yml")
 
 Tip: [CronTab Guru](https://crontab.guru/).
 
+#### `06-schedule.yml`
+
 ```{r}
 #| results: asis
 #| echo: false
@@ -129,4 +134,15 @@ yaml_file_as_code(".github/workflows/06-schedule.yml")
 ```
 
 
-### Changes on code
+### 7 - Changes on the code
+
+The workflow run is triggered every time someone pushes a change to the repository or merges a pull request. 
+
+#### `07-on-push.yml`
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+yaml_file_as_code(".github/workflows/07-on-push.yml")
+```

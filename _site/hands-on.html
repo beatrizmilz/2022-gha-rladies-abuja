@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 <a href="#exploring-events" id="toc-exploring-events" class="nav-link" data-scroll-target="#exploring-events">Exploring events!</a>
   <ul class="collapse">
 <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">6 - Schedule</a></li>
-  <li><a href="#changes-on-code" id="toc-changes-on-code" class="nav-link" data-scroll-target="#changes-on-code">Changes on code</a></li>
+  <li><a href="#changes-on-the-code" id="toc-changes-on-the-code" class="nav-link" data-scroll-target="#changes-on-the-code">7 - Changes on the code</a></li>
   </ul>
 </li>
   </ul></nav>
@@ -263,6 +263,7 @@ jobs:
 <span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
 </div>
 </section></section><section id="save-results-from-code-in-the-repository" class="level3"><h3 class="anchored" data-anchor-id="save-results-from-code-in-the-repository">5 - Save results from code in the repository</h3>
+<section id="saving-results.yml" class="level4"><h4 class="anchored" data-anchor-id="saving-results.yml"><code>05-saving-results.yml</code></h4>
 <div class="sourceCode">
 <pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
   workflow_dispatch:
@@ -297,9 +298,10 @@ jobs:
           git commit -m "Saving the results" || echo "no changes to commit"
           git push origin || echo "no changes to commit"</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
 </div>
-</section></section><section id="exploring-events" class="level2"><h2 class="anchored" data-anchor-id="exploring-events">Exploring events!</h2>
+</section></section></section><section id="exploring-events" class="level2"><h2 class="anchored" data-anchor-id="exploring-events">Exploring events!</h2>
 <section id="schedule" class="level3"><h3 class="anchored" data-anchor-id="schedule">6 - Schedule</h3>
 <p>Tip: <a href="https://crontab.guru/">CronTab Guru</a>.</p>
+<section id="schedule.yml" class="level4"><h4 class="anchored" data-anchor-id="schedule.yml"><code>06-schedule.yml</code></h4>
 <div class="sourceCode">
 <pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
   workflow_dispatch:
@@ -336,10 +338,47 @@ jobs:
           git commit -m "Saving the results" || echo "no changes to commit"
           git push origin || echo "no changes to commit"</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
 </div>
-</section><section id="changes-on-code" class="level3"><h3 class="anchored" data-anchor-id="changes-on-code">Changes on code</h3>
+</section></section><section id="changes-on-the-code" class="level3"><h3 class="anchored" data-anchor-id="changes-on-the-code">7 - Changes on the code</h3>
+<p>The workflow run is triggered every time someone pushes a change to the repository or merges a pull request.</p>
+<section id="on-push.yml" class="level4"><h4 class="anchored" data-anchor-id="on-push.yml"><code>07-on-push.yml</code></h4>
+<div class="sourceCode">
+<pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
+  workflow_dispatch:
+  on: push
+
+name: 07-saving-results
+
+jobs:
+  run-r-script:
+    runs-on: ubuntu-latest
+    env: 
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v2
+        with: 
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+          packages:
+            any::httr
+            any::fs
+
+      - name: run-script
+        run: Rscript scripts/04-r-script.R        
+        
+      - name: commit files
+        run: |
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git add -A
+          git commit -m "Saving the results" || echo "no changes to commit"
+          git push origin || echo "no changes to commit"</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+</div>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
