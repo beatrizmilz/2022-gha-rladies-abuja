@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
   <li>
 <a href="#exploring-events" id="toc-exploring-events" class="nav-link" data-scroll-target="#exploring-events">Exploring events!</a>
   <ul class="collapse">
-<li><a href="#cron" id="toc-cron" class="nav-link" data-scroll-target="#cron">CRON</a></li>
+<li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">6 - Schedule</a></li>
   <li><a href="#changes-on-code" id="toc-changes-on-code" class="nav-link" data-scroll-target="#changes-on-code">Changes on code</a></li>
   </ul>
 </li>
@@ -153,6 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="exploring-jobs" class="level2"><h2 class="anchored" data-anchor-id="exploring-jobs">Exploring jobs!</h2>
 <section id="writing-a-simple-workflow" class="level3"><h3 class="anchored" data-anchor-id="writing-a-simple-workflow">1 - Writing a simple workflow</h3>
+<section id="hello-gha.yml" class="level4"><h4 class="anchored" data-anchor-id="hello-gha.yml"><code>01-hello-gha.yml</code></h4>
 <div class="sourceCode">
 <pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
   workflow_dispatch:
@@ -166,7 +167,8 @@ jobs:
       - name: print-message
         run: echo "Hello GitHub Actions! 🎉"</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
 </div>
-</section><section id="print-message-using-r" class="level3"><h3 class="anchored" data-anchor-id="print-message-using-r">2 - Print message using R!</h3>
+</section></section><section id="print-message-using-r" class="level3"><h3 class="anchored" data-anchor-id="print-message-using-r">2 - Print message using R!</h3>
+<section id="hello-r-world.yml" class="level4"><h4 class="anchored" data-anchor-id="hello-r-world.yml"><code>02-hello-r-world.yml</code></h4>
 <div class="sourceCode">
 <pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
   workflow_dispatch:
@@ -182,7 +184,8 @@ jobs:
         run: Rscript -e 'print("Hello R World!")'
         </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
 </div>
-</section><section id="run-code-from-r-script-only-base-packages" class="level3"><h3 class="anchored" data-anchor-id="run-code-from-r-script-only-base-packages">3 - Run code from R script (only base packages)</h3>
+</section></section><section id="run-code-from-r-script-only-base-packages" class="level3"><h3 class="anchored" data-anchor-id="run-code-from-r-script-only-base-packages">3 - Run code from R script (only base packages)</h3>
+<section id="run-r-script.yml" class="level4"><h4 class="anchored" data-anchor-id="run-r-script.yml"><code>03-run-r-script.yml</code></h4>
 <div class="sourceCode">
 <pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
   workflow_dispatch:
@@ -199,15 +202,18 @@ jobs:
         run: Rscript scripts/03-r-script.R
         </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
 </div>
-<ul>
-<li>Also, let’s create a simple script and save it on <code>"scripts/03-r-script.R"</code>:</li>
-</ul>
+</section><section id="scripts03-r-script.r" class="level4"><h4 class="anchored" data-anchor-id="scripts03-r-script.r"><code>scripts/03-r-script.R</code></h4>
 <div class="sourceCode">
 <pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"Sampling 10 numbers between 1 and 100: "</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"Print date: "</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
 </div>
-</section><section id="run-code-using-other-packages" class="level3"><h3 class="anchored" data-anchor-id="run-code-using-other-packages">4 - Run code using other packages</h3>
+</section></section><section id="run-code-using-other-packages" class="level3"><h3 class="anchored" data-anchor-id="run-code-using-other-packages">4 - Run code using other packages</h3>
+<section id="run-r-script-with-pkgs.yml" class="level4"><h4 class="anchored" data-anchor-id="run-r-script-with-pkgs.yml"><code>04-run-r-script-with-pkgs.yml</code></h4>
 <div class="sourceCode">
 <pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
   workflow_dispatch:
@@ -225,16 +231,111 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 2
-          extra-packages: |
-            any::httr          
+          packages:
+            any::httr
+            any::fs
 
       - name: run-script
-        run: Rscript scripts/04-r-script-parte2.R        </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+        run: Rscript scripts/04-r-script.R        </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
 </div>
-</section><section id="save-results-from-code-in-the-repository" class="level3"><h3 class="anchored" data-anchor-id="save-results-from-code-in-the-repository">5 - Save results from code in the repository</h3>
-<p>TODO!</p>
+</section><section id="scripts04-r-script.r" class="level4"><h4 class="anchored" data-anchor-id="scripts04-r-script.r"><code>scripts/04-r-script.R</code></h4>
+<div class="sourceCode">
+<pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://httr.r-lib.org/">httr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://fs.r-lib.org">fs</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"Checking which files we have:"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#  the URL </span></span>
+<span><span class="va">url_download</span> <span class="op">=</span> <span class="st">"https://app.anm.gov.br/SIGBM/Publico/ClassificacaoNacionalDaBarragem/ExportarExcel"</span></span>
+<span></span>
+<span><span class="co"># file name to save</span></span>
+<span><span class="va">file_name</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"sigbm_download_"</span>, <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">".xlsx"</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"Making a POST request and writing file on disk:"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://httr.r-lib.org/reference/POST.html">POST</a></span><span class="op">(</span><span class="va">url_download</span>, <span class="fu"><a href="https://httr.r-lib.org/reference/write_disk.html">write_disk</a></span><span class="op">(</span><span class="va">file_name</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"Checking which files we have:"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+</div>
+</section></section><section id="save-results-from-code-in-the-repository" class="level3"><h3 class="anchored" data-anchor-id="save-results-from-code-in-the-repository">5 - Save results from code in the repository</h3>
+<div class="sourceCode">
+<pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
+  workflow_dispatch:
+
+name: 05-saving-results
+
+jobs:
+  run-r-script:
+    runs-on: ubuntu-latest
+    env: 
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v2
+        with: 
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+          packages:
+            any::httr
+            any::fs
+
+      - name: run-script
+        run: Rscript scripts/04-r-script.R        
+        
+      - name: commit files
+        run: |
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git add -A
+          git commit -m "Saving the results" || echo "no changes to commit"
+          git push origin || echo "no changes to commit"</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+</div>
 </section></section><section id="exploring-events" class="level2"><h2 class="anchored" data-anchor-id="exploring-events">Exploring events!</h2>
-<section id="cron" class="level3"><h3 class="anchored" data-anchor-id="cron">CRON</h3>
+<section id="schedule" class="level3"><h3 class="anchored" data-anchor-id="schedule">6 - Schedule</h3>
+<p>Tip: <a href="https://crontab.guru/">CronTab Guru</a>.</p>
+<div class="sourceCode">
+<pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
+  workflow_dispatch:
+  schedule:
+  - cron: '*/5 * * * *'
+  
+name: 06-event-schedule
+
+jobs:
+  run-r-script:
+    runs-on: ubuntu-latest
+    env: 
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v2
+        with: 
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+          packages:
+            any::httr
+            any::fs
+
+      - name: run-script
+        run: Rscript scripts/04-r-script.R        
+        
+      - name: commit files
+        run: |
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git add -A
+          git commit -m "Saving the results" || echo "no changes to commit"
+          git push origin || echo "no changes to commit"</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+</div>
 </section><section id="changes-on-code" class="level3"><h3 class="anchored" data-anchor-id="changes-on-code">Changes on code</h3>
 
 
