@@ -23,6 +23,7 @@ website:
     contents:
       - href: index.qmd
         text: "Home" 
+      - speaker.qmd
       - prerequisites.qmd  
       - slide.qmd
       - hands-on.qmd

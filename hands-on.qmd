@@ -34,6 +34,8 @@ paste0(
 }
 ```
 
+First, we need to create a repository: <https://github.com/new>
+
 ## Exploring jobs!
 
 ### 1 - Writing a simple workflow

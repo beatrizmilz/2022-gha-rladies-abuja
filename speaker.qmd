@@ -1,0 +1,31 @@
+---
+title: "Speaker"
+image: https://avatars.githubusercontent.com/u/42153618?v=4
+about:
+  template: trestles
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:milz.bea@gmail.com
+    - icon: file-pdf
+      text: Resume
+      href: https://beatrizmilz.github.io/resume/index.pdf  
+    - icon: github
+      text: GitHub
+      href: https://github.com/beatrizmilz
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/BeaMilz      
+---
+
+::: {#hero-heading}
+Beatriz is a Data Scientist and a R teacher at [Curso-R](https://curso-r.com/). She is an R-Lady from São Paulo - Brazil. 
+
+Bea is a [tidyverse instructor certified by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/), an [international speaker](https://beamilz.com/talks/) (speaking at events such as RStudio Conference, Python Brasil, useR, and LatinR), and has written about programming in R in [her blog](https://beamilz.com/posts/) since 2019. 
+
+In addition, she co-organizes communities and events, such as [R-Ladies São Paulo](https://twitter.com/RLadiesSaoPaulo), [Latin-R](https://twitter.com/LatinR_Conf), and [satRday São Paulo](https://twitter.com/satRdaySP). 
+
+Her favorite GitHub feature is GitHub Actions!
+:::
+
+

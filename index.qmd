@@ -7,3 +7,22 @@ editor: visual
 ---
 
 ## Welcome!
+
+
+### Code of Conduct
+
+This code of conduct applies to all R-Ladies spaces, including meetups, Twitter, Slack, mailing lists, both online and offline: <https://rladies.org/code-of-conduct/>
+
+### Follow R-Ladies Abuja!
+
+- [Meetup event](https://www.meetup.com/rladies-abuja/events/288082908/)
+
+- [Meetup](https://www.meetup.com/pt-BR/rladies-abuja/)
+
+- [Twitter](https://twitter.com/rladiesabuja)
+
+- [Youtube](https://www.youtube.com/channel/UCktFo5XoX5QZMWb2Gb3KY2A)
+
+
+
+<!-- ![](img/abuja.png) -->

@@ -90,6 +90,11 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./speaker.html" class="sidebar-item-text sidebar-link">Speaker</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./prerequisites.html" class="sidebar-item-text sidebar-link">Prerequisites</a>
   </div>
 </li>
@@ -151,6 +156,7 @@ ul.task-list li input[type="checkbox"] {
 </header><div class="cell">
 
 </div>
+<p>First, we need to create a repository: <a href="https://github.com/new" class="uri">https://github.com/new</a></p>
 <section id="exploring-jobs" class="level2"><h2 class="anchored" data-anchor-id="exploring-jobs">Exploring jobs!</h2>
 <section id="writing-a-simple-workflow" class="level3"><h3 class="anchored" data-anchor-id="writing-a-simple-workflow">1 - Writing a simple workflow</h3>
 <section id="hello-gha.yml" class="level4"><h4 class="anchored" data-anchor-id="hello-gha.yml"><code>01-hello-gha.yml</code></h4>
@@ -307,7 +313,7 @@ jobs:
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  "15 12 * * *"
+    - cron:  "0/5 * * * *"
   
 name: 06-event-schedule
 

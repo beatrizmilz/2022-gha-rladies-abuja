@@ -126,6 +126,27 @@
     "text": "Read more\nSuggestions of supplemental material about using Git and GitHub in RStudio:\n\nFirst Steps in Learning the Use of Git & GitHub in RStudio - https://www.youtube.com/watch?v=jN6tvgt3GK8\nYou can read detailed information about how to do this in the book Happy Git with R."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Running code while we’re sleeping",
+    "section": "",
+    "text": "This code of conduct applies to all R-Ladies spaces, including meetups, Twitter, Slack, mailing lists, both online and offline: https://rladies.org/code-of-conduct/\n\n\n\n\nMeetup event\nMeetup\nTwitter\nYoutube"
+  },
+  {
+    "objectID": "speaker.html",
+    "href": "speaker.html",
+    "title": "Speaker",
+    "section": "",
+    "text": "Beatriz is a Data Scientist and a R teacher at Curso-R. She is an R-Lady from São Paulo - Brazil.\nBea is a tidyverse instructor certified by RStudio, an international speaker (speaking at events such as RStudio Conference, Python Brasil, useR, and LatinR), and has written about programming in R in her blog since 2019.\nIn addition, she co-organizes communities and events, such as R-Ladies São Paulo, Latin-R, and satRday São Paulo.\nHer favorite GitHub feature is GitHub Actions!"
+  },
+  {
+    "objectID": "hands-on.html",
+    "href": "hands-on.html",
+    "title": "Hands on!",
+    "section": "",
+    "text": "First, we need to create a repository: https://github.com/new"
+  },
+  {
     "objectID": "hands-on.html#exploring-jobs",
     "href": "hands-on.html#exploring-jobs",
     "title": "Hands on!",
@@ -137,6 +158,6 @@
     "href": "hands-on.html#exploring-events",
     "title": "Hands on!",
     "section": "Exploring events!",
-    "text": "Exploring events!\n6 - Schedule\nTip: CronTab Guru.\n06-schedule.yml\n\n  on:\n  workflow_dispatch:\n  schedule:\n    # * is a special character in YAML so you have to quote this string\n    - cron:  \"15 12 * * *\"\n  \nname: 06-event-schedule\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\"\n\n7 - Changes on the code\nThe workflow run is triggered every time someone pushes a change to the repository or merges a pull request.\n07-on-push.yml\n\n  on:\n  workflow_dispatch:\n  push:\n    branches:\n      - main\n      - master\n\nname: 07-saving-results\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\""
+    "text": "Exploring events!\n6 - Schedule\nTip: CronTab Guru.\n06-schedule.yml\n\n  on:\n  workflow_dispatch:\n  schedule:\n    # * is a special character in YAML so you have to quote this string\n    - cron:  \"0/5 * * * *\"\n  \nname: 06-event-schedule\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\"\n\n7 - Changes on the code\nThe workflow run is triggered every time someone pushes a change to the repository or merges a pull request.\n07-on-push.yml\n\n  on:\n  workflow_dispatch:\n  push:\n    branches:\n      - main\n      - master\n\nname: 07-saving-results\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env: \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}    \n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with: \n          use-public-rspm: true\n      - uses: r-lib/actions/setup-r-dependencies@v2\n        with:\n          cache-version: 2\n          packages:\n            any::httr\n            any::fs\n\n      - name: run-script\n        run: Rscript scripts/04-r-script.R        \n        \n      - name: commit files\n        run: |\n          git config --local user.name \"$GITHUB_ACTOR\"\n          git config --local user.email \"$GITHUB_ACTOR@users.noreply.github.com\"\n          git add -A\n          git commit -m \"Saving the results\" || echo \"no changes to commit\"\n          git push origin || echo \"no changes to commit\""
   }
 ]
