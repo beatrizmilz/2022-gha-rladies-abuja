@@ -12,7 +12,7 @@ file_name = paste0("sigbm_download_", Sys.Date(), ".xlsx")
 
 
 print("Making a POST request and writing file on disk:")
-POST(url_download, write_disk(file_name))
+POST(url_download, write_disk(file_name, overwrite = TRUE))
 
 
 print("Checking which files we have:")
