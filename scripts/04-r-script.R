@@ -1,7 +1,7 @@
 library(httr)
 library(fs)
 
-# checking which files we have
+print("Checking which files we have:")
 dir_ls()
 
 #  the URL 
@@ -12,10 +12,12 @@ file_name <- paste0(
   "sigbm_download_", Sys.Date(), ".xlsx"
 )
 
-# POST and write file on disk
+
+print("Making a POST request and writing file on disk:")
 POST(url_download, write_disk(file_name))
 
-# checking which files document we have
+
+print("Checking which files we have:")
 dir_ls()
 
      
