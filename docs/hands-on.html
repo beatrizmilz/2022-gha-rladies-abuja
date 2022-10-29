@@ -306,7 +306,8 @@ jobs:
 <pre class="downlit sourceCode r code-with-copy">  <code class="sourceCode R">on:
   workflow_dispatch:
   schedule:
-  - cron: '*/5 * * * *'
+    # * is a special character in YAML so you have to quote this string
+    - cron:  "15 12 * * *"
   
 name: 06-event-schedule
 
